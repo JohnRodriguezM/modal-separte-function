@@ -16,7 +16,7 @@ export const Modales = () => {
       <Button onClick={open1}>
         <>Modal 1</>
       </Button>
-      <Modal isOpen={modal1}>
+      <Modal isOpen={modal1} closeModal = {close1}>
         <div>
           <Button onClick={close1}>
             <>Closexx</>
@@ -31,7 +31,7 @@ export const Modales = () => {
       <Button onClick={open2}>
         <>Modal 2</>
       </Button>
-      <Modal isOpen={modal2}>
+      <Modal isOpen={modal2} closeModal = {close2}>
         <div>
           <Button onClick={close2}>
             <>closexx</>
