@@ -4,7 +4,7 @@ import { Button } from "./Button";
 import { useModal } from "../hooks/useModal";
 export const Modales = () => {
 
-  //!funciona de manera exacta a un useState
+  //!
   const [modal1, open1, close1] = useModal(false);
   const [modal2, open2, close2] = useModal(true);
   const [modal3, open3, close3] = useModal(true);
