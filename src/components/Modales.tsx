@@ -11,7 +11,7 @@ export const Modales = () => {
 
   return (
     <div>
-      <h2>those are my modals</h2>
+      <h2>these are my modals</h2>
 
       <Button onClick={open1}>
         <>Modal 1</>
