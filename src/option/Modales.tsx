@@ -3,11 +3,15 @@ import { Modal } from "./Modal";
 import { ModalPortal } from "./ModalPortal";
 import { useModal } from "./useModal";
 
+import { Info } from "./Info";
+
 export const Modales = () => {
   const [modal1, open1, close1] = useModal("none");
   const [modal2, open2, close2] = useModal("block");
   const [modal3, open3, close3] = useModal("none");
   const [modalPortal, openModalPortal, closeModalPortal] = useModal("none");
+
+  const [info, openInfo, closeInfo] = useModal("none");
   return (
     <div>
       <button onClick={open1}>open modal 1</button>
@@ -53,6 +57,16 @@ export const Modales = () => {
           <input type="submit" value="enviar modal portal" />
         </>
       </ModalPortal>
+      <br /><br /><br /><br />
+      {/*otro uso de portales para un mensaje de informacion*/}
+      <button onClick={openInfo}>open info de advertencia</button>
+      <Info
+        title="Advertencia de pretemporada"
+        description="Esta es una advertencia de pretemporada"
+        closeAdvertencia={closeInfo}
+        info = {info}
+        image = 'https://placeimg.com/40/40/animals'
+      />
     </div>
   );
 };
